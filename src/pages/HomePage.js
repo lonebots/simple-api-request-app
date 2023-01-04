@@ -10,9 +10,9 @@ function HomePage() {
     return (
         <div className='homepage'>
             <div className='card-container'>
-                <div className=''>
-                    homepage prompt
-                    <UserCard user={user} />
+                <div className='' placeholder='homepage prompt'>
+                    
+                    {/* <UserCard user={user} /> */}
                 </div>
             </div>
             <div className='button-container'>
