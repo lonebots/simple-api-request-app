@@ -1,8 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import HomePage from './pages/HomePage';
 import { useEffect, useState } from 'react';
-import axios from 'axios'
+import { getAllUsers } from './redux/User/user.actions';
 
 function App() {
 
@@ -12,7 +11,7 @@ function App() {
   // loading app the call the api : https://reqres.in/api/users?
   useEffect(
     () => {
-
+      getAllUsers(1);
     }, []//empty dependencies for component did mount
   )
 
