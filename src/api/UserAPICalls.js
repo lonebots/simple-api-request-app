@@ -9,7 +9,7 @@ export const requestAllUsers = async (page) => {
 
         return {
             users: response.data.data,
-            total_no_users: response.data.total
+            count: response.data.total
         }
     } catch (error) {
         console.log(error)
