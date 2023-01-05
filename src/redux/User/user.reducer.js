@@ -25,11 +25,11 @@ const userReducer = (state = initialState, action) => {
         case GET_SINGLE_USER:
             return {
                 ...state,
-                user: action.payload,
+                user: action.payload.user,
             }
 
         default:
-            return state
+            return { ...state }
 
 
     }
