@@ -1,4 +1,4 @@
-import { useEffect, React, useState } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 import Button from '../components/Button'
 import UserCard from '../components/UserCard'
@@ -11,18 +11,14 @@ function HomePage() {
 
     return (
         <div className='homepage'>
-            {/* {console.log("loading : ", loading)} */}
             <div className='card-container'>
                 <h3>Click to Load the data</h3>
-                {Object.keys(user).length !== 0 ?
-                    (<div className='' >
-                        <UserCard user={user} />
-                    </div>)
-                    :
-                    (<></>)
+                {
+                    Object.keys(user).length !== 0 &&
+                    <UserCard user={user} />
                 }
-
             </div>
+
             <div className='button-container'>
                 {
                     count > 0 &&
@@ -32,7 +28,6 @@ function HomePage() {
                         )
                     })
                 }
-
             </div>
         </div>
     )
