@@ -9,6 +9,7 @@ API used : [https://reqres.in/](https://reqres.in/)
 - simple UI
 - dynamically loaded button
 - view user details on button click
+- loading screen
 
 #### TECHNOLOGIES USED:
 
