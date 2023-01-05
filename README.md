@@ -1,6 +1,8 @@
 # SHOW USER APP
 
-[live demo](https://simple-api-request-app.vercel.app/)
+[app live demo](https://simple-api-request-app.vercel.app/)
+
+API used : [https://reqres.in/](https://reqres.in/)
 
 #### FUNCTIONALITY :
 
