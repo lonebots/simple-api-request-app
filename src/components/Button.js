@@ -1,8 +1,15 @@
 import React from 'react'
+import { getSingleUser } from '../redux/User/user.actions'
 
-function Button() {
+function Button({ id, dispatch }) {
+  // call action to set curent user
+  const handleClick = (id) => {
+    getSingleUser(id)
+  }
   return (
-    <div>Button</div>
+    <button className='button' onClick={() => handleClick(id)}>
+      {id}
+    </button>
   )
 }
 
