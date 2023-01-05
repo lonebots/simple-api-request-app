@@ -24,7 +24,6 @@ const UserCard = ({ user }) => {
             </div >)
       }
     </>
-
   )
 }
 
