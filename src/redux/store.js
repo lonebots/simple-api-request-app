@@ -1,7 +1,7 @@
 import { applyMiddleware, createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
-import userReducer from "./User/user.reducer";
+import userReducer from "./User";
 
 const store = createStore(
     userReducer,
