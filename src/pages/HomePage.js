@@ -12,7 +12,7 @@ function HomePage() {
     return (
         <div className='homepage'>
             <div className='card-container'>
-                <h3>Click to Load the data</h3>
+                <h3>Click any button to Load User data</h3>
                 {
                     Object.keys(user).length !== 0 &&
                     <UserCard user={user} />
