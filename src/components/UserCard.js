@@ -12,11 +12,10 @@ const UserCard = ({ user }) => {
             <div className='user-card' >
               <div className='user-details'>
                 <div className='user-info'>
-                  {user.first_name}
-                  <p className='userdetail_text'> First Name: <b> {user.first_name} </b></p>
-                  <p className='userdetail_text'> Last Name: <b> {user.last_name} </b></p>
-                  <p className='userdetail_text'> Email Address: <b> {user.email}</b> </p>
-                  <p className='userdetail_text'> User ID: <b> {user.id}</b> </p>
+                  <p className='user-details-text'> First Name: <b> {user.first_name} </b></p>
+                  <p className='user-details-text'> Last Name: <b> {user.last_name} </b></p>
+                  <p className='user-details-text'> Email Address: <b> {user.email}</b> </p>
+                  <p className='user-details-text'> User ID: <b> {user.id}</b> </p>
                 </div>
                 <div className='user-avatar'>
                   <img className='avatar' src={user.avatar} alt='user-avatar' />
