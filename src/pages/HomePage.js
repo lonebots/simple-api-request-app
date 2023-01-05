@@ -1,30 +1,38 @@
-import React from 'react'
+import { useEffect, React, useState } from 'react'
+import { useSelector } from 'react-redux'
+import Button from '../components/Button'
 import UserCard from '../components/UserCard'
 
 function HomePage() {
-    const user = {
-
-    }
-
+    const count = useSelector(state => state.users.count)
+    var buttonCountList = Array.from(Array(count).keys(), n => n + 1);
+    const user = useSelector(state => state.users.user)
+    const loading = useSelector(state => state.users.loading)
 
     return (
         <div className='homepage'>
+            {/* {console.log("loading : ", loading)} */}
             <div className='card-container'>
-                <div className='' placeholder='homepage prompt'>
-                    
-                    {/* <UserCard user={user} /> */}
-                </div>
+                <h3>Click to Load the data</h3>
+                {Object.keys(user).length !== 0 ?
+                    (<div className='' >
+                        <UserCard user={user} />
+                    </div>)
+                    :
+                    (<></>)
+                }
+
             </div>
             <div className='button-container'>
-                <button className='button'>
-                    1
-                </button>
-                <button className='button'>
-                    2
-                </button>
-                <button className='button'>
-                    3
-                </button>
+                {
+                    count > 0 &&
+                    buttonCountList.map((id, idx) => {
+                        return (
+                            <Button id={id} key={idx} loading={loading} />
+                        )
+                    })
+                }
+
             </div>
         </div>
     )
